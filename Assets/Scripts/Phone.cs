@@ -21,7 +21,9 @@ public class Phone : MonoBehaviour
     {
         SetImagesToTexture();
     }
-    void SetImagesToTexture(){
+
+    public void SetImagesToTexture(){
+        scrollIndex = 0;
         // create a new material with the shader of your choice
         Material targetMaterial = new Material(Shader.Find("Unlit/Texture"));
         if (sourceImages.Length == 0) return;
