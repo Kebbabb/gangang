@@ -16,12 +16,7 @@ public class Phone : MonoBehaviour
 
     public int scrollIndex = 0;
     public Color backgroundColor = new Color(1, 1, 1, 1); // Transparent background color
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        SetImagesToTexture();
-    }
-
+    // Start is called once before the first execution of Update after the MonoBehaviour is created 
     public void SetImagesToTexture(){
         scrollIndex = 0;
         // create a new material with the shader of your choice
