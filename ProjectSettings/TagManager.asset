@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Table
   - MainDesk
+  - Ground
+  - Phone
   layers:
   - Default
   - TransparentFX
