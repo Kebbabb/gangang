@@ -8,6 +8,7 @@ TagManager:
   - MainDesk
   - Ground
   - Phone
+  - Guide
   layers:
   - Default
   - TransparentFX
@@ -15,7 +16,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - UI2
   - 
   - 
   - 

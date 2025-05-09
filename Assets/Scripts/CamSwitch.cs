@@ -8,8 +8,10 @@ public class CamSwitch : MonoBehaviour
     public CinemachineCamera mainVCam;
     public CinemachineCamera tableVCam;
     public CinemachineCamera mobileVCam;
+    public CinemachineCamera GuideVCam;
     private CinemachineBrain brain;
     public GameObject phoneUI;
+    public GameObject GuideUI;
 
 
     public void SwitchToTable()
@@ -26,11 +28,24 @@ public class CamSwitch : MonoBehaviour
         tableVCam.Priority = 5;
         StartCoroutine(WaitUntilCameraIsActive(mobileVCam, () => {EnablePhoneUI();}));
     }
+    public void SwitchToGuide()
+    {
+        mobileVCam.Priority = 1;
+        mainVCam.Priority = 2;
+        tableVCam.Priority = 5;
+        GuideVCam.Priority = 10;
+        StartCoroutine(WaitUntilCameraIsActive(GuideVCam, () => { EnableGuideUI(); }));
+    }
     void EnablePhoneUI(){
         phoneUI.SetActive(true);
     }
+    void EnableGuideUI()
+    {
+        GuideUI.SetActive(true);
+    }
     void DisableUI(){
         phoneUI.SetActive(false);
+        GuideUI.SetActive(false);
     }
     public void SwitchToGround()
     {
@@ -67,6 +82,11 @@ public class CamSwitch : MonoBehaviour
                 if (hit.collider.CompareTag("MainDesk"))
                 {
                     SwitchToTable();
+                }
+                else if (hit.collider.CompareTag("Guide"))
+                {
+                    Debug.Log("Hit Guide");
+                    SwitchToGuide();
                 }
                 else if (hit.collider.CompareTag("Phone"))
                 {
