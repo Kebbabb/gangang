@@ -20,6 +20,7 @@ public class PhonePostsManager : MonoBehaviour
     public TMP_Text newPointsText;
     public AudioSource correctAnswerSound;
     public AudioSource wrongAnswerSound;
+    public CamSwitch camSwitch;
 
 
     // Viral count down
@@ -120,6 +121,7 @@ public class PhonePostsManager : MonoBehaviour
         streak = 0;
         int displayStreak = highestStreak;
         highestStreak = 0;
+        camSwitch.SwitchToTable();
         Texture2D[] images = currentDayObject.getSourceImages();
         phone.sourceImages = images;
         StartCoroutine(WaitAndExecute(0.7f, () => {
@@ -129,6 +131,7 @@ public class PhonePostsManager : MonoBehaviour
                 phone.SetImagesToTexture();
                 newDayUI.CanContinue();
                 uiToHideOnScroll.SetActive(true);
+                
             }));
         }));
     }
