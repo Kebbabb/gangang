@@ -11,7 +11,7 @@ public class CamSwitch : MonoBehaviour
     public CinemachineCamera GuideVCam;
     private CinemachineBrain brain;
     public GameObject phoneUI;
-    public GameObject GuideUI;
+    public PhonePostsManager phone;
 
 
     public void SwitchToTable()
@@ -41,11 +41,15 @@ public class CamSwitch : MonoBehaviour
     }
     void EnableGuideUI()
     {
-        GuideUI.SetActive(true);
+        if(phone.currentDayObject.paper != null){
+            phone.currentDayObject.paper.SetActive(true);
+        }
     }
     void DisableUI(){
         phoneUI.SetActive(false);
-        GuideUI.SetActive(false);
+        if(phone.currentDayObject.paper != null){
+            phone.currentDayObject.paper.SetActive(false);
+        }
     }
     public void SwitchToGround()
     {
@@ -105,6 +109,7 @@ public class CamSwitch : MonoBehaviour
     private IEnumerator WaitUntilCameraIsActive(CinemachineCamera targetCam, System.Action onComplete = null)
     {
         Debug.Log($"Waiting for {targetCam.Name} to be active...");
+        Debug.Log(brain.ActiveVirtualCamera);
         while (brain.IsBlending || brain.ActiveVirtualCamera != targetCam)
         {
             yield return null;
