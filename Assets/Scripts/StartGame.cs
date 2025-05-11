@@ -39,7 +39,7 @@ public class StartGame : MonoBehaviour
     public void startgame()
     {
         // Load the game scene
-        UnityEngine.SceneManagement.SceneManager.LoadScene("Beny");
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Ben ekstra");
     }
     public void Guide()
     {
