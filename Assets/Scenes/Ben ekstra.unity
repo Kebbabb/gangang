@@ -5467,6 +5467,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1210314365}
     m_Modifications:
+    - target: {fileID: -1429139442360407447, guid: b83d87eb5c60b1c4e8a244008c157aa4, type: 3}
+      propertyPath: m_Texture
+      value: 
+      objectReference: {fileID: 2800000, guid: 9541e0aa232c0b84992ad473b4065323, type: 3}
     - target: {fileID: 2012579599676922807, guid: b83d87eb5c60b1c4e8a244008c157aa4, type: 3}
       propertyPath: m_Name
       value: Avis 1 (2)
@@ -7659,6 +7663,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1210314365}
     m_Modifications:
+    - target: {fileID: -1429139442360407447, guid: b83d87eb5c60b1c4e8a244008c157aa4, type: 3}
+      propertyPath: m_Texture
+      value: 
+      objectReference: {fileID: 2800000, guid: b39788fa67626f348a7f435f6b58ff14, type: 3}
     - target: {fileID: 2012579599676922807, guid: b83d87eb5c60b1c4e8a244008c157aa4, type: 3}
       propertyPath: m_Name
       value: Avis 1 (1)
