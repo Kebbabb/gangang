@@ -610,7 +610,7 @@ MonoBehaviour:
   mobileVCam: {fileID: 713290386}
   GuideVCam: {fileID: 1861766492}
   phoneUI: {fileID: 265086560}
-  GuideUI: {fileID: 998682343}
+  phone: {fileID: 1308161889}
 --- !u!4 &90491058
 Transform:
   m_ObjectHideFlags: 0
@@ -8790,6 +8790,7 @@ MonoBehaviour:
       viral: 0
       timeToViral: 20
     pointsPerPost: 10
+    paper: {fileID: 0}
   - posts:
     - image: {fileID: 2800000, guid: f024961a97cf1f14daf9541bb971747a, type: 3}
       fakeNews: 0
@@ -8804,7 +8805,12 @@ MonoBehaviour:
       viral: 0
       timeToViral: 20
     pointsPerPost: 15
+    paper: {fileID: 0}
   phone: {fileID: 635290069}
+  currentDayObject:
+    posts: []
+    pointsPerPost: 1
+    paper: {fileID: 0}
   uiToHideOnScroll: {fileID: 308514347}
   newDayUI: {fileID: 227655822}
   newPointsText: {fileID: 1495963214}

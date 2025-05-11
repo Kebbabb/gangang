@@ -9,7 +9,7 @@ public class PhonePostsManager : MonoBehaviour
     public int currentDay = 1;
     public List<Day> days = new List<Day>();
     public Phone phone;
-    private Day currentDayObject;
+    public Day currentDayObject;
     private int pointsPerPost;
     private int streakMultiplier = 1;
     private int streak = 0;
@@ -115,6 +115,9 @@ public class PhonePostsManager : MonoBehaviour
 
         Debug.Log("New Day: " + currentDay);
         currentDay++;
+        if(currentDayObject.paper != null){
+            currentDayObject.paper.SetActive(false);
+        }
         currentDayObject = days[currentDay - 1];
         pointsPerPost = currentDayObject.pointsPerPost;
         streakMultiplier = pointsPerPost/5;
@@ -155,6 +158,7 @@ public class PhonePostsManager : MonoBehaviour
 public class Day {
     public Post[] posts;
     public int pointsPerPost = 1;
+    public GameObject paper;
     public Texture2D[] getSourceImages() {
         Texture2D[] images = new Texture2D[posts.Length];
         for (int i = 0; i < posts.Length; i++) {
