@@ -8419,7 +8419,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2070449419}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: StartGame, Assembly-CSharp
         m_MethodName: intro
         m_Mode: 1
@@ -8556,7 +8556,6 @@ GameObject:
   - component: {fileID: 2070449422}
   - component: {fileID: 2070449421}
   - component: {fileID: 2070449420}
-  - component: {fileID: 2070449419}
   m_Layer: 5
   m_Name: StartUI
   m_TagString: Untagged
@@ -8564,32 +8563,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2070449419
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2070449418}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4476b7e75a4a11346a451950c855d381, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  IntroUI: {fileID: 816232908}
-  GuideUI: {fileID: 737872963}
-  StartUI: {fileID: 2070449418}
-  G1: {fileID: 450415550}
-  G2: {fileID: 107975572}
-  G3: {fileID: 216848305}
-  G4: {fileID: 1285288722}
-  G5: {fileID: 108187654}
-  G6: {fileID: 342079366}
-  G7: {fileID: 0}
-  G8: {fileID: 0}
-  G9: {fileID: 0}
-  G10: {fileID: 0}
-  G11: {fileID: 0}
 --- !u!114 &2070449420
 MonoBehaviour:
   m_ObjectHideFlags: 0
