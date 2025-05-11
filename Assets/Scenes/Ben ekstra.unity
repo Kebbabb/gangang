@@ -4249,7 +4249,7 @@ Transform:
   m_GameObject: {fileID: 713290384}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0.83, y: 2.22, z: -2.27}
+  m_LocalPosition: {x: -0.95, y: 1.95, z: -2.329}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8773,16 +8773,20 @@ MonoBehaviour:
   currentDay: 1
   days:
   - posts:
-    - image: {fileID: 2800000, guid: f024961a97cf1f14daf9541bb971747a, type: 3}
+    - image: {fileID: 2800000, guid: 6479d0e40dfb29645b69f7b3439578b9, type: 3}
       fakeNews: 0
       viral: 0
       timeToViral: 20
-    - image: {fileID: 2800000, guid: ea7b4b8f7dca7e9419ca3b7fea671b6d, type: 3}
-      fakeNews: 1
+    - image: {fileID: 2800000, guid: 9541e0aa232c0b84992ad473b4065323, type: 3}
+      fakeNews: 0
       viral: 1
       timeToViral: 5
-    - image: {fileID: 2800000, guid: f024961a97cf1f14daf9541bb971747a, type: 3}
-      fakeNews: 0
+    - image: {fileID: 2800000, guid: 38ff09fe84dd40d499bd0dee5162125a, type: 3}
+      fakeNews: 1
+      viral: 1
+      timeToViral: 20
+    - image: {fileID: 2800000, guid: b39788fa67626f348a7f435f6b58ff14, type: 3}
+      fakeNews: 1
       viral: 0
       timeToViral: 20
     pointsPerPost: 10
