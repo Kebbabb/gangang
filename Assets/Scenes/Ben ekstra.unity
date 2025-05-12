@@ -9990,7 +9990,7 @@ MonoBehaviour:
     - image: {fileID: 2800000, guid: 9541e0aa232c0b84992ad473b4065323, type: 3}
       fakeNews: 0
       viral: 1
-      timeToViral: 5
+      timeToViral: 15
     - image: {fileID: 2800000, guid: 38ff09fe84dd40d499bd0dee5162125a, type: 3}
       fakeNews: 1
       viral: 1
@@ -10002,7 +10002,7 @@ MonoBehaviour:
     - image: {fileID: 2800000, guid: da0a5b910bb5f0f46af7be375c360e0c, type: 3}
       fakeNews: 1
       viral: 1
-      timeToViral: 5
+      timeToViral: 10
     pointsPerPost: 10
     paper: {fileID: 998682343}
   - posts:
