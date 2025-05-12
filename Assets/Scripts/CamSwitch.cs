@@ -11,6 +11,7 @@ public class CamSwitch : MonoBehaviour
     public CinemachineCamera GuideVCam;
     private CinemachineBrain brain;
     public GameObject phoneUI;
+    public GameObject Hjælp;
     public PhonePostsManager phone;
 
 
@@ -20,12 +21,14 @@ public class CamSwitch : MonoBehaviour
         mainVCam.Priority = 5;
         tableVCam.Priority = 10;
         DisableUI();
+        Hjælp.SetActive(false);
     }
     public void SwitchToPhone()
     {
         mobileVCam.Priority = 10;
         mainVCam.Priority = 2;
         tableVCam.Priority = 5;
+        Hjælp.SetActive(false);
         StartCoroutine(WaitUntilCameraIsActive(mobileVCam, () => {EnablePhoneUI();}));
     }
     public void SwitchToGuide()
@@ -34,6 +37,7 @@ public class CamSwitch : MonoBehaviour
         mainVCam.Priority = 2;
         tableVCam.Priority = 5;
         GuideVCam.Priority = 10;
+        Hjælp.SetActive(false);
         StartCoroutine(WaitUntilCameraIsActive(GuideVCam, () => { EnableGuideUI(); }));
     }
     void EnablePhoneUI(){
@@ -56,10 +60,12 @@ public class CamSwitch : MonoBehaviour
         mainVCam.Priority = 10;
         tableVCam.Priority = 5;
         mobileVCam.Priority = 2;
+        
         DisableUI();
     }
     private void Start()
     {
+        Hjælp.SetActive(true);
         DisableUI();
         brain = Camera.main.GetComponent<CinemachineBrain>();
         if (mainVCam!= null && tableVCam != null && mobileVCam != null)
